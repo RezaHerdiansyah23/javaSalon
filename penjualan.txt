@@ -1,0 +1,34 @@
+Reza_2022-01-07_1,2022-01-07,Reza,null,0
+Reza_2022-01-07_2,2022-01-07,Reza,null,0
+Reza_2022-07-21_1,2022-07-21,Reza,Potong Rambut,15000,1
+Reza_2022-07-21_1,2022-07-21,Reza,Masker + catok + blow ,50000,1
+Reza_2022-01-08_1,2022-01-08,Reza,Smooting,200000,1
+Reza_2022-01-08_2,2022-01-08,Reza,Lulur Scrub + vit e,50000,1
+Reza_2022-01-08_2,2022-01-08,Reza,Sulam Alis microShanding,350000,1
+Reza_2022-01-08_3,2022-01-08,Reza,masker kutu,70000,1
+Reza_2022-01-08_3,2022-01-08,Reza,toning,200000,2
+Reza_2022-01-08_4,2022-01-08,Reza,bleaching + vit e,100000,1
+Reza_2022-01-08_4,2022-01-08,Reza,Lulur Scrub + vit e,50000,1
+reza_2022-01-08_5,2022-01-08,reza,Masker + catok + blow ,50000,1
+reza_2022-01-08_5,2022-01-08,reza,Tindik hidung free anting,50000,1
+reza_2022-01-08_5,2022-01-08,reza,Sulam Tahi lalat,150000,1
+reza_2022-01-08_6,2022-01-08,reza,Masker + catok + blow ,50000,1
+reza_2022-01-08_6,2022-01-08,reza,Masker + catok + blow ,50000,1
+reza_2022-01-08_6,2022-01-08,reza,Sulam Tahi lalat,150000,1
+reza_2022-01-08_7,2022-01-08,reza,masker kutu,70000,1
+reza_2022-01-08_7,2022-01-08,reza,bleaching + vit e,100000,1
+reza_2022-01-08_8,2022-01-08,reza,Tindik hidung free anting,50000,1
+reza_2022-01-08_8,2022-01-08,reza,Tindik telinga anting,100000,2
+reza_2022-01-08_9,2022-01-08,reza,Masker + catok + blow ,50000,1
+reza_2022-01-08_9,2022-01-08,reza,Tindik hidung free anting,50000,1
+reza_2022-01-08_10,2022-01-08,reza,Keriting Bulu mata,60000,1
+reza_2022-01-08_10,2022-01-08,reza,Sulam Tahi lalat,150000,1
+reza_2022-01-08_11,2022-01-08,reza,Gigi gingsul dan taring,100000,1
+reza_2022-01-08_11,2022-01-08,reza,Keriting Bulu mata,60000,1
+reza_2022-01-08_12,2022-01-08,reza,Smooting,200000,1
+reza_2022-01-08_12,2022-01-08,reza,Warna Rambut,100000,1
+asep_2022-01-08_1,2022-01-08,asep,Venner Gigi,300000,1
+asep_2022-01-08_1,2022-01-08,asep,BB glowing,100000,1
+asep_2022-01-08_1,2022-01-08,asep,Sulam Tahi lalat,150000,1
+asep_2022-01-08_2,2022-01-08,asep,Smooting,200000,1
+asep_2022-01-08_2,2022-01-08,asep,Warna Rambut,100000,1

@@ -8,8 +8,8 @@ class Login {
 
     // constructor
     public Login() {
-        username = "Reza";
-        password = "123456789";
+        username = "reza";
+        password = "12345678";
         nama = "Reza Herdiansyah";
     }
 
@@ -55,30 +55,34 @@ class Menu {
 
         // instance of class
         Login user1 = new Login();
-        System.out.println("=============LOGIN===============");
+        System.out.println("╔════════════════════════════════════════════╗");
+        System.out.println("║                  LOGIN                     ║");
+        System.out.println("╚════════════════════════════════════════════╝");
         System.out.print("|  Masukan username = ");
         my_user = br.readLine();
         System.out.print("|  Masukan password = ");
         my_password = br.readLine();
-        System.out.println("=================================");
+        System.out.println("════════════════════════════════════════════");
 
         if (my_user.equals(user1.getUsername()) && my_password.equals(user1.getPassword())) {
-            System.out.println("=================================");
-            System.out.println("      *** Login Sukses ***");
-            System.out.println(" Selamat Datang " + user1.getNama());
-            System.out.println("=================================");
+            System.out.println("╔════════════════════════════════════════════╗");
+            System.out.println("║               SELAMAT DATANG               ║");
+            System.out.println("║        " + user1.getNama() + "             ║");
+            System.out.println("╚════════════════════════════════════════════╝");
             SalonLagi.menu();
         } else {
-            System.out.println("=================================");
-            System.out.println("       *** Login Galgal***");
-            System.out.println("=================================");
+            System.out.println("╔════════════════════════════════════════════╗");
+            System.out.println("║                  LOGIN  GAGAL              ║");
+            System.out.println("╚════════════════════════════════════════════╝");
             do {
-                System.out.println("=============LOGIN===============");
+                System.out.println("╔════════════════════════════════════════════╗");
+                System.out.println("║                  LOGIN                     ║");
+                System.out.println("╚════════════════════════════════════════════╝");
                 System.out.print("|  Masukan username = ");
                 my_user = br.readLine();
                 System.out.print("|  Masukan password = ");
                 my_password = br.readLine();
-                System.out.println("=================================");
+                System.out.println("════════════════════════════════════════════");
             } while (my_user.equals(user1.getUsername()) && my_password.equals(user1.getPassword()));
         }
     }
