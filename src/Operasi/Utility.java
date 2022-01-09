@@ -45,7 +45,7 @@ public class Utility {
                 ft.parse(dateInput);
                 dateValid = true;
             } catch (Exception e) {
-                System.out.println("Format tahun yang anda masukan salah, format=(yyyy.MM.dd)");
+                System.out.println("Format tanggal yang anda masukan salah, format=(yyyy.MM.dd)");
                 System.out.print("silahkan masukan tahun terbit lagi: ");
                 dateValid = false;
                 dateInput = terminalInput.nextLine();
@@ -55,7 +55,7 @@ public class Utility {
         return dateInput;
     }
 
-    static long ambilEntryPerTahun(String penulis, String date) throws IOException {
+    static long ambilEntryDate(String kasir, String date) throws IOException {
         FileReader fileInput = new FileReader("penjualan.txt");
         BufferedReader bufferInput = new BufferedReader(fileInput);
 
@@ -71,9 +71,9 @@ public class Utility {
             dataScanner = new Scanner(primaryKey);
             dataScanner.useDelimiter("_");
 
-            penulis = penulis.replaceAll("\\s+", "");
+            kasir = kasir.replaceAll("\\s+", "");
 
-            if (penulis.equalsIgnoreCase(dataScanner.next()) && date.equalsIgnoreCase(dataScanner.next())) {
+            if (kasir.equalsIgnoreCase(dataScanner.next()) && date.equalsIgnoreCase(dataScanner.next())) {
                 entry = dataScanner.nextInt();
             }
 
@@ -95,7 +95,7 @@ public class Utility {
         if (isDisplay) {
             System.out
                     .println(
-                            "\n║  No ║ \tTahun ║ \tPenulis                ║ \tNama Layanan               ║ \tHarga Layanan");
+                            "\n║  No ║ \tTahun ║ \tKasir                  ║ \tNama Layanan               ║ \tHarga Layanan");
             System.out.println(
                     "════════════════════════════════════════════════════════════════════════════════════════════════════════════");
         }

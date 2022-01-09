@@ -49,8 +49,8 @@ class Login {
 
 class Menu {
     public static void main(String[] args) throws Exception {
-        String usr, psw, lg, my_user, my_password;
-        ;
+        String my_user, my_password;
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         // instance of class

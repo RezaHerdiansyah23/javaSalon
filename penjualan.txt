@@ -32,3 +32,5 @@ asep_2022-01-08_1,2022-01-08,asep,BB glowing,100000,1
 asep_2022-01-08_1,2022-01-08,asep,Sulam Tahi lalat,150000,1
 asep_2022-01-08_2,2022-01-08,asep,Smooting,200000,1
 asep_2022-01-08_2,2022-01-08,asep,Warna Rambut,100000,1
+_2022-01-08_1,2022-01-08,,Venner Gigi,300000,1
+asep_2022-01-08_3,2022-01-08,asep,Masker + catok + blow ,50000,1

@@ -12,9 +12,6 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-// import CRUD library
-import Driver.SalonLagi;
-
 /**
  *
  * @author REZA
@@ -488,7 +485,7 @@ public class Operasi {
                     totalHarga[i] = jumlah;
                     break;
                 default:
-                    System.err.print("\nInput anda tidak ditemukan\n SILAHKAN PILIH [1-5]");
+                    System.err.print("\nInput anda tidak ditemukan\n SILAHKAN PILIH [1-44]");
                     break;
             }
             totalBayarJenis = totalHarga[i];
@@ -544,32 +541,30 @@ public class Operasi {
 
         // mengambil input dari user
         Scanner terminalInput = new Scanner(System.in);
-        String penulis, date;
+        String kasir, date;
 
         System.out.print("masukan nama penulis: ");
-        penulis = terminalInput.nextLine();
-        System.out.print("masukan tahun terbit, format=(yyyy.MM.dd): ");
+        kasir = terminalInput.nextLine();
+        System.out.print("masukan tanggal transaksi , format=(yyyy.MM.dd): ");
         date = Utility.ambilDate();
 
-        // cek buku di database
-
         String[] keywords = {
-                date + "," + penulis + "," + namaLayanan[i] + "," + jumlahPesan[i] + "," + totalHarga[i] };
+                date + "," + kasir + "," + namaLayanan[i] + "," + jumlahPesan[i] + "," + totalHarga[i] };
         System.out.println(Arrays.toString(keywords));
 
-        // menulis buku di databse
+        // menulis data di databse
 
         // fiersabesari_2012_1,2012,fiersa besari,media kita,jejak langkah
-        System.out.println(Utility.ambilEntryPerTahun(penulis, date));
-        long nomorEntry = Utility.ambilEntryPerTahun(penulis, date) + 1;
+        System.out.println(Utility.ambilEntryDate(kasir, date));
+        long nomorEntry = Utility.ambilEntryDate(kasir, date) + 1;
         for (i = 1; i <= n; i++) {
-            String punulisTanpaSpasi = penulis.replaceAll("\\s+", "");
-            String primaryKey = punulisTanpaSpasi + "_" + date + "_" + nomorEntry;
+            String kasirTanpaSpasi = kasir.replaceAll("\\s+", "");
+            String primaryKey = kasirTanpaSpasi + "_" + date + "_" + nomorEntry;
             System.out.println("\nData yang akan anda masukan adalah");
             System.out.println("════════════════════════════════════════");
-            System.out.println("primary key  : " + primaryKey);
-            System.out.println("tahun terbit : " + date);
-            System.out.println("penulis      : " + penulis);
+            System.out.println("primary key       : " + primaryKey);
+            System.out.println("tanggal transaksi : " + date);
+            System.out.println("Kasir             : " + kasir);
             System.out.println("total        : " + jumlahPesan[i]);
             System.out.println("nama layanan : " + namaLayanan[i]);
             System.out.println("harga        : " + totalHarga[i]);
@@ -577,7 +572,7 @@ public class Operasi {
             boolean isTambah = Utility.getYesOrNo("Apakah akan ingin menambah data tersebut? ");
 
             if (isTambah) {
-                bufferOutput.write(primaryKey + "," + date + "," + penulis + "," + namaLayanan[i] + "," + totalHarga[i]
+                bufferOutput.write(primaryKey + "," + date + "," + kasir + "," + namaLayanan[i] + "," + totalHarga[i]
                         + "," + jumlahPesan[i]);
                 bufferOutput.newLine();
                 bufferOutput.flush();
@@ -597,14 +592,14 @@ public class Operasi {
             fileInput = new FileReader("penjualan.txt");
             bufferInput = new BufferedReader(fileInput);
         } catch (Exception e) {
-            System.err.println("Database Tidak ditemukan");
+            System.err.println("file Tidak ditemukan");
             System.err.println("Silahkan tambah data terlebih dahoeloe");
             layanan();
             return;
         }
 
         System.out.println(
-                "\n║  No ║ \tTahun ║ \tPenulis                ║ \tNama Layanan               ║ \tharga Layanan");
+                "\n║  No ║ \tTahun ║ \tKasir                ║ \tNama Layanan               ║ \tharga Layanan");
         System.out.println(
                 "════════════════════════════════════════════════════════════════════════════════════════════════════════════");
 
@@ -638,14 +633,13 @@ public class Operasi {
         try {
             File file = new File("penjualan.txt");
         } catch (Exception e) {
-            System.err.println("Database Tidak ditemukan");
+            System.err.println("file Tidak ditemukan");
             System.err.println("Silahkan tambah data terlebih dahoeloe");
             layanan();
             return;
         }
 
         // ambil keyword dari user
-
         Scanner terminalInput = new Scanner(System.in);
         System.out.print("Masukan kata kunci untuk mencari data: ");
         String cariString = terminalInput.nextLine();
